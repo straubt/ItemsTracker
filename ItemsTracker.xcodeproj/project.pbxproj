@@ -11,6 +11,11 @@
 		B3EC623A2B5A78ED009BFCAE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EC62392B5A78ED009BFCAE /* ContentView.swift */; };
 		B3EC623C2B5A78EF009BFCAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3EC623B2B5A78EF009BFCAE /* Assets.xcassets */; };
 		B3EC623F2B5A78EF009BFCAE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3EC623E2B5A78EF009BFCAE /* Preview Assets.xcassets */; };
+		B3EC62472B5A7D77009BFCAE /* answer.md in Resources */ = {isa = PBXBuildFile; fileRef = B3EC62462B5A7D77009BFCAE /* answer.md */; };
+		B3EC62492B5A8128009BFCAE /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EC62482B5A8128009BFCAE /* AddItemView.swift */; };
+		B3EC624B2B5AA43B009BFCAE /* LootItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EC624A2B5AA43B009BFCAE /* LootItem.swift */; };
+		B3EC624D2B5AA6DB009BFCAE /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EC624C2B5AA6DB009BFCAE /* Game.swift */; };
+		B3EC62592B5AC3C1009BFCAE /* LootDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EC62582B5AC3C1009BFCAE /* LootDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		B3EC62392B5A78ED009BFCAE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B3EC623B2B5A78EF009BFCAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3EC623E2B5A78EF009BFCAE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B3EC62462B5A7D77009BFCAE /* answer.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = answer.md; sourceTree = "<group>"; };
+		B3EC62482B5A8128009BFCAE /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
+		B3EC624A2B5AA43B009BFCAE /* LootItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LootItem.swift; sourceTree = "<group>"; };
+		B3EC624C2B5AA6DB009BFCAE /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		B3EC62582B5AC3C1009BFCAE /* LootDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LootDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +63,13 @@
 			children = (
 				B3EC62372B5A78ED009BFCAE /* ItemsTrackerApp.swift */,
 				B3EC62392B5A78ED009BFCAE /* ContentView.swift */,
+				B3EC62582B5AC3C1009BFCAE /* LootDetailView.swift */,
 				B3EC623B2B5A78EF009BFCAE /* Assets.xcassets */,
 				B3EC623D2B5A78EF009BFCAE /* Preview Content */,
+				B3EC62462B5A7D77009BFCAE /* answer.md */,
+				B3EC62482B5A8128009BFCAE /* AddItemView.swift */,
+				B3EC624A2B5AA43B009BFCAE /* LootItem.swift */,
+				B3EC624C2B5AA6DB009BFCAE /* Game.swift */,
 			);
 			path = ItemsTracker;
 			sourceTree = "<group>";
@@ -127,6 +142,7 @@
 			files = (
 				B3EC623F2B5A78EF009BFCAE /* Preview Assets.xcassets in Resources */,
 				B3EC623C2B5A78EF009BFCAE /* Assets.xcassets in Resources */,
+				B3EC62472B5A7D77009BFCAE /* answer.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +154,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3EC623A2B5A78ED009BFCAE /* ContentView.swift in Sources */,
+				B3EC624D2B5AA6DB009BFCAE /* Game.swift in Sources */,
+				B3EC62492B5A8128009BFCAE /* AddItemView.swift in Sources */,
+				B3EC62592B5AC3C1009BFCAE /* LootDetailView.swift in Sources */,
+				B3EC624B2B5AA43B009BFCAE /* LootItem.swift in Sources */,
 				B3EC62382B5A78ED009BFCAE /* ItemsTrackerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
