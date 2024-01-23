@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Charts
 
 class Inventory: ObservableObject {
     @Published var loot = [
@@ -39,21 +40,25 @@ struct ContentView: View {
 //                    Text("Ajouter")
 //                })
                 
-                ForEach(inventory.loot, id: \.self) { item in
+                ForEach(inventory.loot) { item in
                     NavigationLink{
                         LootDetailView(item: item)
                     } label: {
-                        VStack(alignment: .leading){
-                            HStack{
-                                Circle().fill(item.rarity.getColor())
-                                    .fixedSize(horizontal: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/, vertical: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
-                                Text(item.name)
-                                Spacer()
-                                Text(item.type.rawValue)
-                            }
-                            Text("Quantity : " + String(item.quantity))
+                        LootRow(item: item)
+                    }
+                }
+                Section{
+                    Text("Your most powerfull weapons")
+                    Chart(inventory.loot){ item in
+                        if let strength = item.attackStrength{
+                            BarMark(
+                                x: .value("Item", item.name),
+                                y: .value("ATQ", strength)
+                            )
                         }
                     }
+                } header: {
+                    Text("Statistiques")
                 }
             }.sheet(isPresented: $showAddItemView, content: {
                 AddItemView().environmentObject(inventory)

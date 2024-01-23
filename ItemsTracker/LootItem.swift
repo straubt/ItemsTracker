@@ -48,7 +48,8 @@ enum ItemType: String, CaseIterable{
     case unknown = "🎲"
 }
 
-struct LootItem: Hashable{
+struct LootItem: Identifiable{
+    var id: UUID = UUID()
     var quantity: Int = 1
     var name: String
     var type: ItemType

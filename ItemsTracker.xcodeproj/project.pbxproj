@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B3DB83362B5FC6AF00D33024 /* LootRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DB83352B5FC6AF00D33024 /* LootRow.swift */; };
+		B3DB83382B5FC8EF00D33024 /* IconItemDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DB83372B5FC8EF00D33024 /* IconItemDetails.swift */; };
+		B3DB833A2B5FC98900D33024 /* ItemDetailsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DB83392B5FC98900D33024 /* ItemDetailsList.swift */; };
 		B3EC62382B5A78ED009BFCAE /* ItemsTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EC62372B5A78ED009BFCAE /* ItemsTrackerApp.swift */; };
 		B3EC623A2B5A78ED009BFCAE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EC62392B5A78ED009BFCAE /* ContentView.swift */; };
 		B3EC623C2B5A78EF009BFCAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3EC623B2B5A78EF009BFCAE /* Assets.xcassets */; };
@@ -19,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B3DB83352B5FC6AF00D33024 /* LootRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LootRow.swift; sourceTree = "<group>"; };
+		B3DB83372B5FC8EF00D33024 /* IconItemDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconItemDetails.swift; sourceTree = "<group>"; };
+		B3DB83392B5FC98900D33024 /* ItemDetailsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsList.swift; sourceTree = "<group>"; };
 		B3EC62342B5A78ED009BFCAE /* ItemsTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ItemsTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3EC62372B5A78ED009BFCAE /* ItemsTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsTrackerApp.swift; sourceTree = "<group>"; };
 		B3EC62392B5A78ED009BFCAE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -70,6 +76,9 @@
 				B3EC62482B5A8128009BFCAE /* AddItemView.swift */,
 				B3EC624A2B5AA43B009BFCAE /* LootItem.swift */,
 				B3EC624C2B5AA6DB009BFCAE /* Game.swift */,
+				B3DB83352B5FC6AF00D33024 /* LootRow.swift */,
+				B3DB83372B5FC8EF00D33024 /* IconItemDetails.swift */,
+				B3DB83392B5FC98900D33024 /* ItemDetailsList.swift */,
 			);
 			path = ItemsTracker;
 			sourceTree = "<group>";
@@ -154,10 +163,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3EC623A2B5A78ED009BFCAE /* ContentView.swift in Sources */,
+				B3DB83362B5FC6AF00D33024 /* LootRow.swift in Sources */,
 				B3EC624D2B5AA6DB009BFCAE /* Game.swift in Sources */,
 				B3EC62492B5A8128009BFCAE /* AddItemView.swift in Sources */,
 				B3EC62592B5AC3C1009BFCAE /* LootDetailView.swift in Sources */,
+				B3DB833A2B5FC98900D33024 /* ItemDetailsList.swift in Sources */,
 				B3EC624B2B5AA43B009BFCAE /* LootItem.swift in Sources */,
+				B3DB83382B5FC8EF00D33024 /* IconItemDetails.swift in Sources */,
 				B3EC62382B5A78ED009BFCAE /* ItemsTrackerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
