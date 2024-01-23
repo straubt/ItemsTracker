@@ -9,19 +9,43 @@ import SwiftUI
 
 struct LootDetailView: View {
     var item: LootItem
+    @State private var animationxAmount = 0.0
+    @State private var animationyAmount = 0.0
+    @State private var animationShadowAmount = 0.0
+    @State private var scaleEffect = 0.0
     var body: some View {
         VStack{
             Text(item.type.rawValue)
+                .font(.system(size: 80))
                 .padding(.all, 20)
                 .background(item.rarity.getColor())
-                .shadow(radius:30)
-                .font(.system(size: 100))
                 .cornerRadius(30)
+                .scaleEffect(animationyAmount)
+                .shadow(color:item.rarity.getColor(), radius: animationShadowAmount)
             Text(item.name)
                 .font(.largeTitle)
                 .foregroundStyle(item.rarity.getColor())
                 .bold()
-        }.frame(height: 300)
+        }.frame(height: 360)
+            .onAppear{
+                Task{
+                    try await Task.sleep(nanoseconds: 400_000_000)
+                    withAnimation(
+                        .bouncy.speed(0.6),
+                        completionCriteria: .logicallyComplete){
+                            animationyAmount += 1
+                        } completion: {
+                            Task{
+                                try await Task.sleep(nanoseconds: 200_000_000)
+                                withAnimation(
+                                    .bouncy.speed(0.6)
+                                ){
+                                    animationShadowAmount += 100
+                                }
+                            }
+                        }
+                }
+            }
         if(item.rarity == Rarity.unique){
             Text("Item Unique 🏆")
                 .frame(minWidth: 80, maxWidth: .infinity, minHeight: 40, maxHeight: 40)
@@ -30,6 +54,19 @@ struct LootDetailView: View {
                 .foregroundStyle(Color.white)
                 .bold()
                 .padding(10)
+                .scaleEffect(scaleEffect)
+                .rotation3DEffect(
+                    .degrees(animationxAmount),
+                    axis: (x: 0, y: 0, z: 1)
+                )
+                .onAppear{
+                    withAnimation(.bouncy.speed(0.8)){
+                        scaleEffect += 1
+                    }
+                    withAnimation(.spring(duration: 1)){
+                        animationxAmount += 720
+                    }
+                }
         }
         List {
             Section{
@@ -55,5 +92,5 @@ struct LootDetailView: View {
 }
 
 #Preview {
-    LootDetailView(item: LootItem(quantity: 1, name: "myItem", type: ItemType.dagger, rarity: Rarity.unique, attackStrength: 500, game: availableGames[0]))
+    LootDetailView(item: LootItem(name: "Poisonous Ring", type: .ring, rarity: .unique, game: availableGames[2]))
 }
