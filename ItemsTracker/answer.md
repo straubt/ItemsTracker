@@ -24,3 +24,6 @@ ObservableObject est utilisé pour créer des objets dont les propriétés publi
 
 StateObject est utilisé pour initialiser un objet observable en tant que propriété d’une vue et garantit que l’objet est créé une seule fois
 Ici on peut donc utiliser le StateObject
+
+//////Partie amélioration Looter
+
